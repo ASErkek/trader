@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YatirimDefteri.Views.Controls.KurTakipBar">
+  <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--favorites title-->
+            <StackLayout Orientation="Horizontal" Grid.Row="0"  Margin="230,20,0,0">
+                <Image Source="edit_icon.png" HorizontalOptions="Start" VerticalOptions="Start" />
+                <Label Margin="0,-6,0,0"
+                           Text="Favorites" Style="{StaticResource Title-Bold-White}" />
+            </StackLayout>
+
+            <!--favorite item cells-->
+            <Grid Grid.Row="1">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+
+                <!--one item cell-->
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Image Source="favoriteitem_cell.png"  Margin="25,-50,12,0" />
+                    <Image Source="big_upsign.png"  HorizontalOptions="Center"/>
+                    <StackLayout>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Orientation="Vertical" Margin="40,10,0,0">
+                                <Label Text="US Dollar" Style="{StaticResource Body-Bold-Black}" FontSize="16"/>
+                                <Label Text="USD" Style="{StaticResource Caption-Bold-Gray}" Margin="0,-8,0,0"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                                Grid.Row="1">
+                                <StackLayout Orientation="Vertical" Margin="10,10,30,0">
+                                    <Label Text="6,843"  Style="{StaticResource Body-Bold-Black}" FontSize="16" />
+                                    <Label Text="+0,34"  Style="{StaticResource Body-Bold-Green}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+                                    <Label Text="6,743" Style="{StaticResource Body-Bold-Black}" FontSize="16"/>
+                                    <Label Text="+0,24" Style="{StaticResource Body-Bold-Green}"/>
+                                </StackLayout>
+
+                            </StackLayout>
+
+                            <Label Text="View Details" Style="{StaticResource Body-Regular-Gray}"
+                                        Grid.Row="2" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,20,0"/>
+                        </Grid>
+                    </StackLayout>
+                </Grid>
+
+                <!--one item cell-->
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Image Source="favoriteitem_cell.png" Margin="12,-50,25,0" />
+                    <Image Source="big_upsign.png"  HorizontalOptions="Center"/>
+                    <StackLayout>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Orientation="Vertical" Margin="30,10,0,0">
+                                <Label Text="Euro" Style="{StaticResource Body-Bold-Black}" FontSize="16"/>
+                                <Label Text="EUR"  Style="{StaticResource Caption-Bold-Gray}" Margin="0,-8,0,0"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                                 Grid.Row="1">
+                                <StackLayout Orientation="Vertical" Margin="-10,10,30,0">
+                                    <Label Text="6,843"  Style="{StaticResource Body-Bold-Black}" FontSize="16" />
+                                    <Label Text="+0,34"  Style="{StaticResource Body-Bold-Green}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" Margin="0,10,0,0">
+                                    <Label Text="6,743" Style="{StaticResource Body-Bold-Black}" FontSize="16"/>
+                                    <Label Text="+0,24" Style="{StaticResource Body-Bold-Green}"/>
+                                </StackLayout>
+
+                            </StackLayout>
+
+                            <Label Text="View Details" Style="{StaticResource Body-Regular-Gray}"
+                                           Grid.Row="2" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,30,0"/>
+                        </Grid>
+
+                    </StackLayout>
+                </Grid>
+
+                <!--one item cell-->
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Image Source="favoriteitem_cell.png" Margin="25,-100,12,0" />
+                    <Image Source="big_downsign.png"  HorizontalOptions="Center" Margin="0,-70,0,0"/>
+                    <StackLayout>
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackLayout Orientation="Vertical"  Margin="40,-15,0,0">
+                                <Label Text="Japanese Yen" Style="{StaticResource Body-Bold-Black}" FontSize="16"/>
+                                <Label Text="JPY" Style="{StaticResource Caption-Bold-Gray}" Margin="0,-8,0,0"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                                 Grid.Row="1">
+                                <StackLayout Orientation="Vertical" Margin="10,-2,30,0">
+                                    <Label Text="0,813"  Style="{StaticResource Body-Bold-Black}" FontSize="16" />
+                                    <Label Text="-0,34"  Style="{StaticResource Body-Bold-Red}"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" Margin="0,-2,0,0">
+                                    <Label Text="0,743" Style="{StaticResource Body-Bold-Black}" FontSize="16"/>
+                                    <Label Text="-0,11" Style="{StaticResource Body-Bold-Red}"/>
+                                </StackLayout>
+
+                            </StackLayout>
+
+                            <Label Text="View Details" Style="{StaticResource Body-Regular-Gray}"
+                                           Grid.Row="2" HorizontalOptions="End" VerticalOptions="Start" Margin="0,0,20,0"/>
+
+                        </Grid>
+
+                    </StackLayout>
+                </Grid>
+
+                <!--add item cell-->
+                <Image Source="favoriteitem_add_cell.png" Margin="12,-100,25,0"
+                           Grid.Row="1" Grid.Column="1"/>
+
+            </Grid>
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

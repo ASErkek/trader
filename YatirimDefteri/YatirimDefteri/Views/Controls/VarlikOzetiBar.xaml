@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YatirimDefteri.Views.Controls.VarlikOzetiBar">
+  <ContentView.Content>
+        <Grid >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="190"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--row 0 - for GRAPH (dummy for now)-->
+            <StackLayout Orientation="Horizontal" Grid.Row="0">
+
+                <!--graph-->
+                <Image Source="graph_dummy.png" Aspect="AspectFill" Margin="10"/>
+
+                <!--details-->
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10">
+                    <ListView x:Name="listView_Varliklar" HasUnevenRows="True" VerticalOptions="Center">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20" />
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <BoxView Grid.Column="0" CornerRadius="10" HeightRequest="15" WidthRequest="15" Color="{Binding renk}" Margin="2"/>
+                                        <Label Grid.Column="1" Text="{Binding varlikAdi}" Style="{StaticResource Body-Bold-Black}"/>
+                                        <Label Grid.Column="2" Text="{Binding varlikMiktari}" Style="{StaticResource Body-Regular-Black}" />
+                                    </Grid>
+                                    
+                                </ViewCell>
+                                
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <Label Text="Toplam Varlık" Style="{StaticResource Body-Bold-Black}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="_" x:Name="label_toplamKar" Style="{StaticResource Caption-Bold-Green}"  FontSize="14" />
+                        <Label Text="₺ -" x:Name="label_toplamVarlik" Style="{StaticResource Title-Regular-Black}"  />
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+            <!--row 1 - for ASSET TRACKING TABLE-->
+            <StackLayout Orientation="Vertical" Grid.Row="1" Margin="0,-30,0,0">
+
+                <StackLayout Margin="0,15,0,0">
+
+                    <Grid Margin="0,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image Source="purple_row_asset_first.png" 
+                               Grid.Row="0" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="135"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Margin="30,-4,0,0"
+                                Text="Instrument" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="1" Margin="0,-4,0,0"
+                                Text="Buy" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="2" Margin="0,-4,0,0"
+                                Text="Sell" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="3" Margin="0,0,0,0"
+                                Text="%Diff." Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="4" Margin="6,-4,0,0"
+                                Text="Total Profit" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Margin="0,-6,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image Source="purple_row_mode1.png" 
+                               Grid.Row="0" />
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="78"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Grid.Column="0"  Margin="25,0,0,0">
+                                <Image  Source="upsign.png"/>
+                            </StackLayout>
+
+                            <Label Grid.Column="1" Margin="-10,-4,0,0"
+                                Text="USD/TRY" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="2" Margin="0,-4,0,0"
+                                Text="6,84" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="3" Margin="0,-4,0,0"
+                                Text="6,80" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="4" Margin="0,-4,0,0"
+                                Text="%0,25" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="5" Margin="0,-4,0,0"
+                                Text="+171,08" Style="{StaticResource Body-Bold-Green}">
+                            </Label>
+
+                        </Grid>
+
+                    </Grid>
+
+                    <Grid Margin="0,-6,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Image Source="purple_row_mode2_last.png" 
+                               Grid.Row="0" />
+
+                        <Grid Margin="0,4,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="78"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout  Grid.Column="0" Margin="25,0,0,0">
+                                <Image Source="down_sign.png"/>
+                            </StackLayout>
+
+
+                            <Label Grid.Column="1" Margin="-10,-4,0,0"
+                                Text="EUR" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="2" HorizontalOptions="StartAndExpand" Margin="0,-4,0,0"
+                                Text="7,68" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="3" HorizontalOptions="StartAndExpand" Margin="0,-4,0,0"
+                                Text="7,45" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="4" HorizontalOptions="StartAndExpand" Margin="0,-4,0,0"
+                                Text="%0,20" Style="{StaticResource Body-Bold-White}">
+                            </Label>
+
+                            <Label Grid.Column="5" HorizontalOptions="StartAndExpand" Margin="0,-4,0,0"
+                                Text="-10,08" Style="{StaticResource Body-Bold-Red}">
+                            </Label>
+
+                        </Grid>
+                    </Grid>
+
+                </StackLayout>
+            </StackLayout>
+
+
+            </Grid>
+
+    </ContentView.Content>
+</ContentView>

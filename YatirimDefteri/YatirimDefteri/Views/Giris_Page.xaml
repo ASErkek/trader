@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YatirimDefteri.Views.Giris_Page">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout x:Name="LoginStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:DataType="Thickness">
+                        40,0,40,10
+                    </OnIdiom>
+                </StackLayout.Padding>
+                <ActivityIndicator x:Name="ActivitySpinner" Color="Red" IsRunning="True" />
+                <Label  x:Name="label_kadi" Text="Kullanıcı Adı" />
+                <Entry  x:Name="entry_kadi" Placeholder="Kullanıcı Adı" />
+                <Label  x:Name="label_pass" Text="Şifre" />
+                <Entry  x:Name="entry_pass" Placeholder="Şifre" />
+                <Button x:Name="button_giris" Text="Giriş" Clicked="Button_giris_Clicked" />
+                <Button x:Name="button_kayit" Text="Kayıt Ol" Clicked="Button_kayit_Clicked"/>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

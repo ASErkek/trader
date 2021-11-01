@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YatirimDefteri.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Global Styles-->
+            <Color x:Key="NavigationPrimary">#2196F3</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <!--///////////////////// COLOR STYLES \\\\\\\\\\\\\\\\\\\\-->
+            <Color x:Key="Dark-Purple">#241332</Color>
+            <Color x:Key="Purple">#362743</Color>
+            <Color x:Key="Light-Purple">#493C55</Color>
+            <Color x:Key="Purple-Purple">#8A56AC</Color>
+            <Color x:Key="Green">#37E39F</Color>
+            <Color x:Key="Red">#FF001E</Color>
+            <Color x:Key="Pink">#D47FA6</Color>
+            <Color x:Key="DeactiveColor">#836D80</Color>
+
+
+
+            <!--///////////////////// LABEL STYLES \\\\\\\\\\\\\\\\\\\\-->
+
+            <!--TITLE STYLES-->
+            <!--TitleBoldBlack-->
+            <Style x:Key="Title-Bold-Black" TargetType="Label">
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--TitleBoldWhite-->
+            <Style x:Key="Title-Bold-White" TargetType="Label">
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--TitleRegularBlack-->
+            <Style x:Key="Title-Regular-Black" TargetType="Label">
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--TitleRegularWhite-->
+            <Style x:Key="Title-Regular-White" TargetType="Label">
+                <Setter Property="FontSize" Value="26"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+
+            <!--BODY STYLES-->
+            <!--BodyBoldWhite-->
+            <Style x:Key="Body-Bold-White" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyBoldBlack-->
+            <Style x:Key="Body-Bold-Black" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyBoldGray-->
+            <Style x:Key="Body-Bold-Gray" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor"  Value="{StaticResource DeactiveColor}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyBoldGreen-->
+            <Style x:Key="Body-Bold-Green" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor"  Value="{StaticResource Green}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyBoldRed-->
+            <Style x:Key="Body-Bold-Red" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor"  Value="{StaticResource Red}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <!--BodyRegularWhite-->
+            <Style x:Key="Body-Regular-White" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyRegularBlack-->
+            <Style x:Key="Body-Regular-Black" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyRegularGray-->
+            <Style x:Key="Body-Regular-Gray" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="{StaticResource DeactiveColor}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyRegularGreen-->
+            <Style x:Key="Body-Regular-Green" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor"  Value="{StaticResource Green}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--BodyRegularRed-->
+            <Style x:Key="Body-Regular-Red" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor"  Value="{StaticResource Red}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+
+            <!--CAPTION STYLES-->
+            <!--CaptionRegularGreen-->
+            <Style x:Key="Caption-Regular-Green" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{StaticResource Green}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionRegularRed-->
+            <Style x:Key="Caption-Regular-Red" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{StaticResource Red}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionRegularBlack-->
+            <Style x:Key="Caption-Regular-Black" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionRegularWhite-->
+            <Style x:Key="Caption-Regular-White" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionRegularGray-->
+            <Style x:Key="Caption-Regular-Gray" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="{StaticResource DeactiveColor}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Regular.otf#Montserrat-Regular"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+            <!--CaptionBoldGreen-->
+            <Style x:Key="Caption-Bold-Green" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{StaticResource Green}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionBoldRed-->
+            <Style x:Key="Caption-Bold-Red" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{StaticResource Red}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionBoldBlack-->
+            <Style x:Key="Caption-Bold-Black" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionBoldWhite-->
+            <Style x:Key="Caption-Bold-White" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            <!--CaptionBoldGray-->
+            <Style x:Key="Caption-Bold-Gray" TargetType="Label">
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="TextColor"  Value="{StaticResource DeactiveColor}"/>
+                <Setter Property="FontFamily" Value="Fonts/Montserrat-Bold.otf#Montserrat-Bold"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

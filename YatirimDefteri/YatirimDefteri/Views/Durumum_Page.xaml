@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YatirimDefteri.Views.Durumum_Page">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+
+            <!--MAIN GRID STARTS
+        4 ROWS
+        1) HEADER
+        2) SUMMARY
+        3) FAVORITES-->
+
+            <Grid BackgroundColor="#241332">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--BACKGROUNDs STARTS-->
+                <RelativeLayout Grid.Row="0" Grid.RowSpan="4">
+
+                    <Image Source="bg.png" Aspect="Fill" Grid.Row="0" Grid.RowSpan="4" />
+                    <Image Source="header_background.png" Aspect="Fill" Grid.Row="0" Grid.RowSpan="4" />
+
+                </RelativeLayout>
+                <!--BACKGROUNDS ENDS-->
+
+                <!--CONTENTs STARTS-->
+                <ScrollView x:Name="scrollView_header" Orientation="Horizontal" Grid.Row="0" />
+                <StackLayout x:Name="stackLayout_varlikOzeti" Grid.Row="1" />
+                <StackLayout x:Name="stackLayout_kurTakip" Grid.Row="2" />
+                <!--CONTENTs ENDS-->
+
+                
+
+
+            </Grid>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
